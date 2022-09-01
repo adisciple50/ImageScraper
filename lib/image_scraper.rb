@@ -14,7 +14,7 @@ module ImageScraper
 
     #A function to get HTML of page at a url
     def get_page()
-      @page = Nokogiri::HTML(open(@url).read)
+      @page = Nokogiri::HTML(URI.open(@url).read)
     end
 
 
